@@ -3,7 +3,7 @@
 A two-player battleship game
 This game has been built by Javascript and node.js
 
-![Battleship screenshot](https://github.com/joannexin/Battleship/blob/master/public/battleship.png)
+![Battleship screenshot](https://github.com/joannexin/Battleship/blob/master/public/assets/battleship.png)
 
 ## Install
 
