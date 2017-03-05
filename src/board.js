@@ -37,23 +37,23 @@ Board.prototype.generateShip = function() {
 
   if (direction === 1) {
     row = Math.floor(Math.random() * 10);
-	  col = Math.floor(Math.random() * (10 - 3 + 1));
+    col = Math.floor(Math.random() * (10 - 3 + 1));
   } else {
     row = Math.floor(Math.random() * (10 - 3 + 1));
-		col = Math.floor(Math.random() * 10);
+    col = Math.floor(Math.random() * 10);
   }
 
   var newLocations = [];
-	for (var i = 0; i < 3; i++) {
-		if (direction === 1) {
+  for (var i = 0; i < 3; i++) {
+    if (direction === 1) {
       var temp = [row, col+i];
-			newLocations.push(temp);
-		} else {
+      newLocations.push(temp);
+    } else {
       var temp = [row+i, col];
-			newLocations.push(temp);
-		}
-	}
-	return newLocations;
+      newLocations.push(temp);
+    }
+  }
+  return newLocations;
 };
 
 Board.prototype.updateSunkSquares = function(ship) {
