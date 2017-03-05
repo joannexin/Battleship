@@ -19,4 +19,4 @@ Step 3: Start server.
 ```
 node server.js
 ```
-Step 4: Open http://yourhost:3000/ in your browser to play.
+Step 4: Open http://localhost:3000/ in your browser to play.
