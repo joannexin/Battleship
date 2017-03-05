@@ -53,6 +53,7 @@ Board.prototype.generateShip = function() {
       newLocations.push(temp);
     }
   }
+  console.log("Here are the coors", newLocations);
   return newLocations;
 };
 

@@ -12,7 +12,7 @@ $(document).ready(function() {
       row2.appendTo("#board2");
     }
   }
-
+  $('#board2').hide();
   $(".square").on("click", function() {
     var coor = $(this).attr("data-coor").split(",");
     var player = $(this).attr("data-player");
@@ -22,7 +22,19 @@ $(document).ready(function() {
 
       var players = data.boards[0].ships;
       var squareActivity = data.boards[0].grid[coor[0]][coor[1]];
-      
+
+      if (data.boards[0].player === 1) {
+        setTimeout(function(){
+          $('#board2').show();
+          $('#board1').hide();
+        }, 2000);
+      } else {
+        setTimeout(function(){
+          $('#board1').show();
+          $('#board2').hide();
+        }, 2000);
+      }
+
       $('.turn').html(`player ${player === "1" ? "2" : "1"}'s turn...`)
       if (data.boards[0].newlySunkedShip) {
         var sunkShip = data.boards[0].newlySunkedShip.name;
