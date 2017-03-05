@@ -1,0 +1,46 @@
+#container {
+  width: 420px;
+  border: 1px solid black;
+}
+
+.row {
+  width: 420px;
+  height: 40px;
+}
+
+.square {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.water {
+  background-color: #abcdef;
+}
+
+.ship {
+  background-color: #AE8888;
+}
+
+.miss {
+  background-color: #88A4BF;
+}
+
+.sunk {
+  background-color: #00FF00;
+}
+
+.turn {
+  color: red;
+}
+
+h3 {
+  color: blue;
+}
+
+.user1, .user2 {
+  float: left;
+  width: 50%;
+}
