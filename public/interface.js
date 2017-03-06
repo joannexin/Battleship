@@ -27,12 +27,12 @@ $(document).ready(function() {
         setTimeout(function(){
           $('#board2').show();
           $('#board1').hide();
-        }, 2000);
+        }, 1000);
       } else {
         setTimeout(function(){
           $('#board1').show();
           $('#board2').hide();
-        }, 2000);
+        }, 1000);
       }
 
       $('.turn').html(`player ${player === "1" ? "2" : "1"}'s turn...`)
