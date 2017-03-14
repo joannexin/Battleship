@@ -6,8 +6,11 @@ const Board = function(player) {
   this.newlySunkedShip = null;
 
   this.ships = [
-    { name: 'destroyer', coors: this.generateShip(), sunk: false },
-    { name: 'scout', coors: this.generateShip(), sunk: false }
+    { name: 'carrier', coors: this.generateShip(5), sunk: false },
+    { name: 'battleship', coors: this.generateShip(4), sunk: false },
+    { name: 'destroyer', coors: this.generateShip(3), sunk: false },
+    { name: 'submarine', coors: this.generateShip(3), sunk: false },
+    { name: 'patrolboat', coors: this.generateShip(2), sunk: false }
   ]
   this.placeShips();
 };
@@ -30,21 +33,21 @@ Board.prototype.gridHit = function(i, j) {
   return validClick;
 };
 
-Board.prototype.generateShip = function() {
+Board.prototype.generateShip = function(n) {
   var direction = Math.floor(Math.random() * 2);
   var row;
   var col;
 
   if (direction === 1) {
     row = Math.floor(Math.random() * 10);
-    col = Math.floor(Math.random() * (10 - 3 + 1));
+    col = Math.floor(Math.random() * (10 - n + 1));
   } else {
-    row = Math.floor(Math.random() * (10 - 3 + 1));
+    row = Math.floor(Math.random() * (10 - n + 1));
     col = Math.floor(Math.random() * 10);
   }
 
   var newLocations = [];
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < n; i++) {
     if (direction === 1) {
       var temp = [row, col+i];
       newLocations.push(temp);
